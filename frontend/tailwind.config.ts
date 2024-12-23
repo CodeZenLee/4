@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        scroll: "scroll 20s linear infinite" //Scrolling Animation
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' }, // Start off-screen to the right
+          '100%': { transform: 'translateX(-100%)' }, // Move off-screen to the left
+        },
+      },
     },
   },
   plugins: [],

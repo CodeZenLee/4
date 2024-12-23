@@ -1,10 +1,129 @@
-
-
+import Image from "next/image";
 
 export default function HorizontalScroll() {
     return(
-        <div>
-
+        <div className="h-[24vh] flex bg-black py-4 overflow-hidden whitespace-nowrap text-white">
+            <div className="animate-scroll flex gap-x-28 items-center">
+                <Image 
+                    src="./icons/adobe.svg"
+                    alt="adobe"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/adobecreativecloud.svg"
+                    alt="adobecreativecloud"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/amazonwebservices.svg"
+                    alt="amazonwebservices"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/android.svg"
+                    alt="android"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/apple.svg"
+                    alt="apple"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/digitalocean.svg"
+                    alt="digitalocean"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/dotnet.svg"
+                    alt="dotnet"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/google.svg"
+                    alt="google"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                ></Image>
+                <Image 
+                    src="./icons/googleads.svg"
+                    alt="googleads"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/googlecloud.svg"
+                    alt="googlecloud"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/mailchimp.svg"
+                    alt="mailchimp"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/meta.svg"
+                    alt="meta"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/oracle.svg"
+                    alt="oracle"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/paypal.svg"
+                    alt="paypal"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+                <Image 
+                    src="./icons/stripe.svg"
+                    alt="stripe"
+                    height={60}
+                    width={60}
+                    className="bg-gray-300"
+                >
+                </Image>
+            </div>
         </div>
     );
 }
