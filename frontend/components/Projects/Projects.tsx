@@ -10,7 +10,7 @@ export default function Projects() {
       </h1>
       <div className="relative group">
         {/* Link wrapping the image and overlay */}
-        <Link href="/case-study">
+        <Link href="https://www.platinumexoticstx.com/" target="_blank">
             <div className="relative w-[600px] h-[125px] overflow-hidden">
               {/* Image */}
               <Image

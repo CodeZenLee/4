@@ -687,8 +687,8 @@ video {
 .gap-8 {
   gap: 2rem;
 }
-.gap-x-28 {
-  column-gap: 7rem;
+.gap-x-20 {
+  column-gap: 5rem;
 }
 .gap-x-8 {
   column-gap: 2rem;

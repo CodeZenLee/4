@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HorizontalScroll() {
     return(
         <div className="h-[24vh] flex bg-black py-4 overflow-hidden whitespace-nowrap text-white">
-            <div className="animate-scroll flex gap-x-28 items-center">
+            <div className="animate-scroll flex gap-x-20 items-center">
                 <Image 
                     src="./icons/adobe.svg"
                     alt="adobe"

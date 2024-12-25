@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="bg-black h-[70vh] flex flex-col justify-between items-center px-8">
       {/* Hero Content */}
-      <div className="flex flex-row w-full h-full items-center">
+      <div className="flex flex-row h-full items-center">
         {/* Hero Copy Section */}
         <div className="text-white flex-1 flex flex-col items-center text-center">
           <h1 className="text-4xl font-bold mb-4">Skyrocket Your Business</h1>

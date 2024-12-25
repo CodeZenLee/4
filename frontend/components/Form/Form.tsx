@@ -1,18 +1,43 @@
 'use client';
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import axios from "axios";
+
 
 export default function Form() {
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    projectDetails: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value, // Dynamically update the field being edited
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Simulate form submission or API call
-    setTimeout(() => {
-      // Redirect to the Thank You page
-      router.push("/ThankYou");
-    }, 500); // Add a delay to simulate submission
+    const formData = { ...formValues };
+
+    try {
+      const response = await axios.post("http://localhost:3001/api/form", formData);
+      if (response.status === 201) {
+        // Route to the Thank You page
+        router.push("/ThankYou");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form. Please try again.");
+    }
   };
 
   return (
@@ -26,27 +51,33 @@ export default function Form() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-y-6">
           <div className="flex gap-8">
             <div className="flex flex-col">
-              <label htmlFor="firstname" className="text-sm font-medium text-left">
+              <label htmlFor="firstName" className="text-sm font-medium text-left">
                 First Name *
               </label>
               <input
                 type="text"
-                id="firstname"
+                id="firstName"
+                name="firstName"
                 placeholder="  First Name"
                 className="py-2 w-52 border bg-black border-white"
                 required
+                value={formValues.firstName}
+                onChange={handleChange}
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="lastname" className="text-sm font-medium text-left">
+              <label htmlFor="lastName" className="text-sm font-medium text-left">
                 Last Name *
               </label>
               <input
                 type="text"
-                id="lastname"
+                id="lastName"
+                name="lastName"
                 placeholder="  Last Name"
                 className="py-2 w-52 border bg-black border-white"
                 required
+                value={formValues.lastName}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -58,9 +89,12 @@ export default function Form() {
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="  Email Address"
                 className="py-2 w-52 border bg-black border-white"
                 required
+                value={formValues.email}
+                onChange={handleChange}
               />
             </div>
             <div className="flex flex-col">
@@ -70,7 +104,10 @@ export default function Form() {
               <input
                 type="text"
                 id="company"
+                name="company"
                 placeholder="  Company Name"
+                value={formValues.company}
+                onChange={handleChange}
                 className="py-2 w-52 border bg-black border-white"
                 required
               />
@@ -83,9 +120,12 @@ export default function Form() {
             <textarea
               id="project"
               placeholder="Project Details"
+              name="projectDetails"
               className="p-4 border bg-black border-white text-white placeholder-gray-500 resize-none"
               rows={4}
               required
+              value={formValues.projectDetails}
+              onChange={handleChange}
             ></textarea>
           </div>
           <button
