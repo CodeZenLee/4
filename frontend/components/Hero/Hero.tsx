@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="flex flex-row h-full items-center">
         {/* Hero Copy Section */}
         <div className="text-white flex-1 flex flex-col items-center text-center">
-          <h1 className="text-4xl font-bold mb-4">Skyrocket Your Business</h1>
+          <h1 className="text-4xl font-bold mb-4">George is a Bitch</h1>
           <p className="text-lg mb-2">Ready to dominate your market?</p>
           <p className="text-lg mb-2">Business growth with websites that deliver results</p>
           <p className="text-lg">Let us craft a custom digital presence that drives conversions and scales with your vision.</p>
