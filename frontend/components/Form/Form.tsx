@@ -29,7 +29,7 @@ export default function Form() {
     const formData = { ...formValues };
 
     try {
-      const response = await axios.post("http://localhost:3001/api/form", formData);
+      const response = await axios.post("https://blackboxexperts.uc.r.appspot.com", formData);
       if (response.status === 201) {
         // Route to the Thank You page
         router.push("/ThankYou");
