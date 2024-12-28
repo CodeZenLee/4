@@ -18,6 +18,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
         <link rel="manifest" href="favicon_io/site.webmanifest" />
+        <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="1gNebR82irMIRhJ10" data-version="062024"></script>
       </head>
       <body className="bg-black">
         {children}
