@@ -41,7 +41,7 @@ export default function Form() {
   };
 
   return (
-    <div id="form" className="h-[60vh] bg-black text-white flex">
+    <div id="contact-form" className="h-[60vh] bg-black text-white flex">
       <div className="p-8 mx-auto text-center">
         <h1 className="text-4xl font-extrabold pb-2">Let&apos;s Work Together.</h1>
         <p className="text-sm">Ready to transform your digital presence?</p>

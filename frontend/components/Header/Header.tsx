@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Header() {
@@ -12,7 +13,9 @@ export default function Header() {
                     <li className="text-white cursor-pointer"><a href="/.">Home</a></li>
                     <li className="text-white cursor-pointer"><a href="/About">About</a></li>
                     <li className="text-white cursor-pointer"><a href="/Services">Services</a></li>
-                    <button className="bg-white px-4 py-2 rounded-md cursor-pointer"><a href="">Call Us!</a></button>
+                    <button className="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 text-white text-lg font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105">
+                        <Link href="/#contact-form">Schedule A Call</Link>
+                    </button>
                 </ul>
             </nav>
         </header>

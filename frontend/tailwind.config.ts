@@ -21,6 +21,9 @@ export default {
           '100%': { transform: 'translateX(-100%)' }, // Move off-screen to the left
         },
       },
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
     },
   },
   plugins: [],

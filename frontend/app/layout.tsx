@@ -24,7 +24,7 @@ export default function RootLayout({
         <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="1gNebR82irMIRhJ10" data-version="062024"></script>
       
       </head>
-      <body className="bg-black">
+      <body className="bg-black scroll-smooth">
         {children}
       </body>
     </html>
