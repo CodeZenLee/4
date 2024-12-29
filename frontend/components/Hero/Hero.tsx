@@ -22,7 +22,7 @@ export default function Hero() {
           <button className="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 text-white text-lg font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 mb-8">
             <Link href="/#contact-form">Schedule A Call</Link>
           </button>
-          <p>30-Day Money Back Guarantee 😀</p>
+          <p>90-Day Money Back Guarantee 😀</p>
         </div>
       </div>
     </div>
